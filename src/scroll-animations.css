@@ -1,0 +1,19 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.scroll-animate.in-view {
+  animation: fadeInUp 0.7s ease-out forwards;
+}

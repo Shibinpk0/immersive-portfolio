@@ -1,0 +1,74 @@
+@keyframes hoverFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spinClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section {
+  animation: sectionFadeIn 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes textReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+  animation: textReveal 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.hero-description {
+  animation: textReveal 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+@keyframes drawTimeline {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+.experience-timeline::before {
+  animation: drawTimeline 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.timeline-node {
+  animation: slideInRight 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  opacity: 0;
+}
+.timeline-node:nth-child(2) { animation-delay: 0.2s; }
+.timeline-node:nth-child(3) { animation-delay: 0.4s; }
+.timeline-node:nth-child(4) { animation-delay: 0.6s; }
+
+.experience-node {
+  animation: slideInRight 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  opacity: 0;
+}
+.experience-node:nth-child(1) { animation-delay: 0.2s; }
+.experience-node:nth-child(2) { animation-delay: 0.4s; }
+.experience-node:nth-child(3) { animation-delay: 0.6s; }
